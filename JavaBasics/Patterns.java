@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Patterns {
    public static void main(String[] args) {
-      int n = 9;
+      // int n = 9;
 
       // for (int i = 0; i <= n / 2; i++) {
       // for (int k = n / 2; k > i; k--) {
@@ -43,13 +43,51 @@ public class Patterns {
       // System.out.println();
       // }
 
-      for (int i = 0; i <= 5; i++) {
-         for (int j = 0; j <= i; j++) {
-            int k = (i + j) % 2;
+      // for (int i = 0; i <= 5; i++) {
+      // for (int j = 0; j <= i; j++) {
+      // int k = (i + j) % 2;
 
-            System.out.print(k == 0 ? 1 : 0);
-         }
-         System.out.println();
-      }
+      // System.out.print(k == 0 ? 1 : 0);
+      // }
+      // System.out.println();
+      // }
+
+      // for (int i = 1; i <= 4; i++) {
+      // for (int j = 1; j <= 4; j++) {
+      // System.out.print(j <= i ? j : " ");
+      // }
+      // for (int j = 4; j >= 1; j--) {
+      // System.out.print(j <= i ? j : " ");
+      // }
+      // System.out.println();
+      // }
+
+      // int n = 1;
+      // for (int i = 1; i <= 5; i++) {
+      // for (int j = 1; j <= i; j++) {
+      // System.out.print(n);
+      // n++;
+      // }
+      // System.out.println();
+      // }
+
+      // char s= 'A';
+      // for (char i = 'A'; i <= 'E'; i++) {
+      // for (char j = i; j <= 'E'; j++) {
+      // System.out.print(s);
+      // s++;
+      // }
+      // System.out.println();
+      // s='A';
+      // }
+
+      // for (char a = 'A'; a <= 'E'; a++) {
+      // for (char b = 'A'; b <= a; b++) {
+      // System.out.print(a);
+      // }
+      // System.out.println();
+      // }
+
+      
    }
 }
