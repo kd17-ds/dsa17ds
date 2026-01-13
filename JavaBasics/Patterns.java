@@ -88,6 +88,29 @@ public class Patterns {
       // System.out.println();
       // }
 
-      
+      // for (int i = 1; i <= 4; i++) {
+      // int aVar = (2 * i) - 1;
+      // for (int j = 4; j > i; j--) {
+      // System.out.print(" ");
+      // }
+      // char c = 'A';
+      // for (int k = 1; k <= aVar; k++) {
+      // int haha = aVar / 2;
+      // System.out.print(haha >= k ? c++ : c--);
+      // }
+      // System.out.println();
+      // }
+
+      char a = 'E';
+      for (int i = 1; i <= 5; i++) {
+         char b = a;
+         for (int j = 1; j <= i; j++) {
+
+            System.out.print(b);
+            b++;
+         }
+         System.out.println();
+         a--;
+      }
    }
 }
