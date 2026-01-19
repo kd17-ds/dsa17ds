@@ -164,6 +164,16 @@ public class Patterns {
       // System.out.println();
       // }
 
-   
+      int n = 9;
+      int x = n % 2 == 0 ? n / 2 : n / 2 + 1;
+      for (int i = 0; i < n; i++) {
+         for (int j = 0; j < n; j++) {
+            int bottom = n - i - 1;
+            int right = n - j - 1;
+            System.out.print(x - (Math.min(Math.min(i, j), Math.min(bottom, right))));
+         }
+         System.out.println();
+      }
+
    }
 }
