@@ -57,6 +57,40 @@ public class Maths {
         return 1;
     }
 
+    public static int divisors(int a) {
+        int count = 0;
+        for (int i = 1; i <= a / 2; i++) {
+            if (a % i == 0) {
+                System.out.println(i);
+            }
+        }
+        System.out.println();
+        return count;
+    }
+
+    public static void optimalDivisor(int a) {
+        for (int i = 1; i <= Math.sqrt(a); i++) {
+            if (a % i == 0) {
+                System.out.println(i);
+                if (i != a / i) {
+                    System.out.println(a / i);
+                }
+            }
+
+        }
+    }
+
+    public static void isPrime(int a) {
+        boolean sambha  = false;
+        for (int i = 2; i <= Math.sqrt(a); i++) {
+           if(a%i==0){
+            sambha = !sambha;
+            break;
+           }
+        }
+        System.out.println(sambha? "Not" : "yes it is");
+    }
+
     public static void main(String args[]) {
         // int n = 12321;
         // int digits = (int) Math.log10(n) + 1;
@@ -72,15 +106,16 @@ public class Maths {
         // }
 
         // gcf
-        System.out.println(GCF(14, 81));
-        System.out.println(gcf(14, 28));
-        int b = 50;
-        int a = 30;
-        while (b != 0) {
-            int r = a % b;
-            a = b;
-            b = r;
-        }
-        System.out.println(a);
+        // System.out.println(GCF(14, 81));
+        // System.out.println(gcf(14, 28));
+        // int b = 50;
+        // int a = 30;
+        // while (b != 0) {
+        // int r = a % b;
+        // a = b;
+        // b = r;
+        // }
+        isPrime(100);
+
     }
 }
