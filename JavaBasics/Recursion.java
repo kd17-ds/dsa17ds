@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 public class Recursion {
 
     public static void printName(int count, int a, String name) {
@@ -40,18 +44,53 @@ public class Recursion {
 
     public static int sumN(int n, int count, int sum) {
 
-        if (count <= n) {
-            sum += count;
-            count++;
-            return sumN(n, count, sum);
-        }
+        // if (count <= n) {
+        // sum += count;
+        // count++;
+        // return sumN(n, count, sum);
+        // }
         // for (int i = 1; i <= n; i++) {
         // sum += i;
         // }
+
+        sum = n * (n + 1) / 2;
         return sum;
     }
 
+    public static int fact(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        return n * fact(n - 1);
+    }
+
+    public static void revArr(int arr[]) {
+        int n = arr.length;
+        for (int i = 0; i < (n / 2); i++) {
+            int temp = arr[i];
+            arr[i] = arr[n - 1 - i];
+            arr[n - 1 - i] = temp;
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+
+    static class Solution {
+        public  void revArr2(ArrayList<Integer> arr) {
+            Collections.reverse(arr);
+        }
+
+    }
+
     public static void main(String args[]) {
-        System.out.print(sumN(5, 1, 0));
+        int arr[] = { 1, 2, 3, 4, 5 };
+        ArrayList<Integer> arr1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        Solution obj = new Solution();
+
+        obj.revArr2(arr1);
+        for(int x : arr1){
+            System.out.println(x);
+        }
     }
 }
