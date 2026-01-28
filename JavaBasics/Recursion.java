@@ -76,21 +76,44 @@ public class Recursion {
         }
     }
 
-    static class Solution {
-        public  void revArr2(ArrayList<Integer> arr) {
-            Collections.reverse(arr);
-        }
+    // static class Solution {
+    // public void revArr2(ArrayList<Integer> arr) {
+    // Collections.reverse(arr);
+    // }
 
+    // }
+
+    public static void fibonachhiSeries(int n) {
+        int a = 0;
+        int b = 1;
+        int x = 0;
+        while (x <= n) {
+            x = a + b;
+            a = b;
+            b = x;
+            System.out.print(x + " ");
+        }
+    }
+
+    public static void printFib(int a, int b, int n) {
+        if (n == 0)
+            return;
+
+        int c = a + b;
+        System.out.print(c + " ");
+        printFib(b, c, n - 1);
     }
 
     public static void main(String args[]) {
-        int arr[] = { 1, 2, 3, 4, 5 };
-        ArrayList<Integer> arr1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
-        Solution obj = new Solution();
+        // int arr[] = { 1, 2, 3, 4, 5 };
+        // ArrayList<Integer> arr1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        // Solution obj = new Solution();
 
-        obj.revArr2(arr1);
-        for(int x : arr1){
-            System.out.println(x);
-        }
+        // obj.revArr2(arr1);
+        // for(int x : arr1){
+        // System.out.println(x);
+        // }
+        System.out.print(0 + " " + 1 + " ");
+        fibonachhiSeries(5);
     }
 }
